@@ -90,10 +90,9 @@ Comprehensive evaluation on **469 ultra-high-resolution UAV images** of *Loropet
 
 ## Our Framework
 
-<div align="center">
-
-<!-- PLACEHOLDER: Add detailed framework architecture diagram -->
-<img src="assets/framework_detailed.png" width="800" alt="framework">
+<p align="center">
+  <img src="assets/CVPR_Architecture.png" alt="Framework" width="100%" style="background-color: white; padding: 20px;">
+</p>
 
 </div>
 
