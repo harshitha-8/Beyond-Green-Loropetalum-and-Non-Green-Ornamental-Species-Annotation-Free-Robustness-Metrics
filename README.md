@@ -66,9 +66,9 @@ Comprehensive evaluation on **469 ultra-high-resolution UAV images** of *Loropet
 
 <p align="center">
   <!-- PLACEHOLDER: Add your framework overview figure -->
-  <img src="assets/Abstract_Image.png" alt="Framework" height="900" style="background-color: white; padding: 20px;">
+  <img src="assets/Abstract_Image.png" alt="Framework" height="900" style="background-color: white; padding: 20px;"> 
   &nbsp;&nbsp;&nbsp;&nbsp
-  <img src="assets/metrics.png" alt="Metrics" height="1000">
+  <img src="assets/metrics.png" alt="Four Robustness Metrics" height="800">
 </p>
 <p align="center">
   <!-- PLACEHOLDER: Add sample detection results across different conditions -->
