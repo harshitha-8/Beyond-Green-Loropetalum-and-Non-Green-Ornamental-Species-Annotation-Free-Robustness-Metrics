@@ -72,12 +72,16 @@ Comprehensive evaluation on **469 ultra-high-resolution UAV images** of *Loropet
   <img src="assets/metrics.png" alt="Metrics Radar Plot" width="70%">
 </p>
 
+<p align="center">
+
 | Dataset | N | RCS | CSC | SVS | ARI |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | Loropetalum | 469 | 0.71 ± 0.04 | 0.92 ± 0.05 | 0.62 ± 0.05 | 0.41 ± 0.09 |
 | MangoNet | 855 | 0.69 ± 0.05 | 0.88 ± 0.06 | 0.64 ± 0.03 | 0.45 ± 0.11 |
 | Leafy Spurge | 900 | 0.45 ± 0.28 | 0.52 ± 0.31 | 0.53 ± 0.25 | 0.50 ± 0.45 |
 | PlantNet Purple | 800 | 0.57 ± 0.22 | 0.69 ± 0.33 | 0.52 ± 0.16 | 0.29 ± 0.23 |
+
+</p>
 
 <p align="center">
   <img src="assets/DJI_20250408145313_0091_D_analysis.png" alt="Analysis Steps Visualization" width="90%">
