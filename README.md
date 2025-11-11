@@ -66,8 +66,8 @@ Comprehensive evaluation on **469 ultra-high-resolution UAV images** of *Loropet
 
 <p align="center">
   <!-- PLACEHOLDER: Add your framework overview figure -->
-  <img src="assets/Abstarct_Image.png" alt="Framework" height="300"> &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="assets/metrics.png" alt="Metrics" height="300">
+  <img src="assets/Abstarct_Image.png" alt="Framework" height="800"> &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/metrics.png" alt="Metrics" height="600">
 </p>
 <p align="center">
   <!-- PLACEHOLDER: Add sample detection results across different conditions -->
@@ -75,14 +75,14 @@ Comprehensive evaluation on **469 ultra-high-resolution UAV images** of *Loropet
 </p>
 
 ## Our Framework
-<!-- 
+
 <div align="center">
 
 <!-- PLACEHOLDER: Add detailed framework architecture diagram -->
 <img src="assets/framework_detailed.png" width="800" alt="framework">
 
 </div>
---->
+
 ## Online Demo
 
 * Visit our demo
