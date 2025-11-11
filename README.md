@@ -84,7 +84,7 @@ Comprehensive evaluation on **469 ultra-high-resolution UAV images** of *Loropet
 </p>
 
 <p align="center">
-  <img src="assets/DJI_20250408145313_0091_D_analysis.png" alt="Analysis Steps Visualization" width="90%">
+  <img src="assets/DJI_20250408145313_0091_D_analysis.png" alt="Analysis Steps Visualization" width="100%">
 </p>
 
 
