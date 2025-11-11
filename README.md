@@ -65,14 +65,21 @@ Our framework addresses critical gaps in UAV-based monitoring of non-green ornam
 Comprehensive evaluation on **469 ultra-high-resolution UAV images** of *Loropetalum chinense* demonstrates strong correlation with deployment success (Spearman ρ = 0.87, p < 0.001), achieving **26.8× faster evaluation** than manual verification and identifying model failures invisible to traditional accuracy metrics.
 
 <p align="center">
-  <!-- PLACEHOLDER: Add your framework overview figure -->
-  <img src="assets/Abstract_Image.png" alt="Framework" height="900" style="background-color: white; padding: 20px;"> 
-  &nbsp;&nbsp;&nbsp;&nbsp
-  <img src="assets/metrics.png" alt="Four Robustness Metrics" height="800">
+  <img src="assets/Abstract_Image.png" alt="Framework" width="80%" style="background-color: white; padding: 20px;">
 </p>
 <p align="center">
-  <!-- PLACEHOLDER: Add sample detection results across different conditions -->
-  <img src="assets/DJI_20250408145313_0091_D_analysis.png" alt="Sample Results" height="530">
+  <img src="assets/metrics.png" alt="Metrics" width="80%">
+</p>
+
+| Dataset | N | RCS | CSC | SVS | ARI |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| Loropetalum | 469 | 0.71 ± 0.04 | 0.92 ± 0.05 | 0.62 ± 0.05 | 0.41 ± 0.09 |
+| MangoNet | 855 | 0.69 ± 0.05 | 0.88 ± 0.06 | 0.64 ± 0.03 | 0.45 ± 0.11 |
+| Leafy Spurge | 900 | 0.45 ± 0.28 | 0.52 ± 0.31 | 0.53 ± 0.25 | 0.50 ± 0.45 |
+| PlantNet Purple | 800 | 0.57 ± 0.22 | 0.69 ± 0.33 | 0.52 ± 0.16 | 0.29 ± 0.23 |
+
+<p align="center">
+  <img src="assets/DJI_20250408145313_0091_D_analysis.png" alt="Sample Results" width="80%">
 </p>
 
 ## Our Framework
