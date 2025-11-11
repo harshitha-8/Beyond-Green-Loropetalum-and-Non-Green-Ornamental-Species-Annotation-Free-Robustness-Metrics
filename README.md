@@ -65,7 +65,11 @@ Our framework addresses critical gaps in UAV-based monitoring of non-green ornam
 Comprehensive evaluation on **469 ultra-high-resolution UAV images** of *Loropetalum chinense* demonstrates strong correlation with deployment success (Spearman ρ = 0.87, p < 0.001), achieving **26.8× faster evaluation** than manual verification and identifying model failures invisible to traditional accuracy metrics.
 
 <p align="center">
-  <img src="assets/metrics_radar_plot.png" alt="Metrics Radar Plot" width="70%">
+  <img src="assets/Abstract_Image.png" alt="Framework" width="80%" style="background-color: white; padding: 20px;">
+</p>
+
+<p align="center">
+  <img src="assets/metrics.png" alt="Metrics Radar Plot" width="70%">
 </p>
 
 | Dataset | N | RCS | CSC | SVS | ARI |
@@ -76,8 +80,9 @@ Comprehensive evaluation on **469 ultra-high-resolution UAV images** of *Loropet
 | PlantNet Purple | 800 | 0.57 ± 0.22 | 0.69 ± 0.33 | 0.52 ± 0.16 | 0.29 ± 0.23 |
 
 <p align="center">
-  <img src="assets/analysis_steps.png" alt="Analysis Steps Visualization" width="90%">
+  <img src="assets/DJI_20250408145313_0091_D_analysis.png" alt="Analysis Steps Visualization" width="90%">
 </p>
+
 
 ## Our Framework
 
