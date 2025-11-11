@@ -65,10 +65,6 @@ Our framework addresses critical gaps in UAV-based monitoring of non-green ornam
 Comprehensive evaluation on **469 ultra-high-resolution UAV images** of *Loropetalum chinense* demonstrates strong correlation with deployment success (Spearman ρ = 0.87, p < 0.001), achieving **26.8× faster evaluation** than manual verification and identifying model failures invisible to traditional accuracy metrics.
 
 <p align="center">
-  <img src="assets/Abstract_Image.png" alt="Framework" width="80%" style="background-color: white; padding: 20px;">
-</p>
-
-<p align="center">
   <img src="assets/metrics_radar_plot.png" alt="Metrics Radar Plot" width="70%">
 </p>
 
