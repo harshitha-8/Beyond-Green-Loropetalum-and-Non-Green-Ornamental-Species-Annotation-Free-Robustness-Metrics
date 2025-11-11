@@ -67,11 +67,12 @@ Comprehensive evaluation on **469 ultra-high-resolution UAV images** of *Loropet
 <p align="center">
   <!-- PLACEHOLDER: Add your framework overview figure -->
   <img src="assets/Abstract_Image.png" alt="Framework" height="900" style="background-color: white; padding: 20px;">
-  <img src="assets/metrics.png" alt="Metrics" height="800">
+  &nbsp;&nbsp;&nbsp;&nbsp
+  <img src="assets/metrics.png" alt="Metrics" height="1000">
 </p>
 <p align="center">
   <!-- PLACEHOLDER: Add sample detection results across different conditions -->
-  <img src="assets/DJI_20250408145313_0091_D_analysis.png" alt="Sample Results" height="430">
+  <img src="assets/DJI_20250408145313_0091_D_analysis.png" alt="Sample Results" height="530">
 </p>
 
 ## Our Framework
