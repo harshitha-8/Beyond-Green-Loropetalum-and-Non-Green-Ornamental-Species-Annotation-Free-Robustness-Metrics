@@ -1,137 +1,44 @@
-# Experiment Configuration for CVPR Submission
-# Beyond Green: Annotation-Free Robustness Metrics
+# Experiment Configuration for CVPR 2026 Submission
 
-# Dataset Configuration
 dataset:
-  loropetalum:
-    path: "./data/loropetalum"
-    num_images: 469
-    image_size: [4000, 3000]
-    description: "Ultra-high-resolution UAV images of Loropetalum chinense"
-  
-  mangonet:
-    path: "./data/mangonet"
-    num_images: 855
-    description: "Cross-dataset evaluation - MangoNet"
-  
-  leafy_spurge:
-    path: "./data/leafy_spurge"
-    num_images: 900
-    description: "Cross-dataset evaluation - Leafy Spurge"
-  
-  plantnet_purple:
-    path: "./data/plantnet_purple"
-    num_images: 800
-    description: "Cross-dataset evaluation - PlantNet Purple species"
+  name: "Loropetalum Chinese UAV Dataset"
+  total_images: 469
+  resolution: [4000, 3000]
+  average_plants_per_image: 1398
+  std_plants_per_image: 267
+  occlusion_range: [0.6, 0.8]
 
-# Model Configuration
 model:
-  enhanced_counter:
-    confidence_threshold: 0.5
-    nms_threshold: 0.4
-    use_color_filtering: true
-    color_lower: [120, 50, 50]   # HSV lower bound for purple/burgundy
-    color_upper: [160, 255, 255]  # HSV upper bound
+  name: "EnhancedLoropetalumCounter"
+  backbone: "ResNet-50"
+  epochs: 100
+  optimizer: "Adam"
+  learning_rate: 0.0001
   
-  yolov8:
-    model_path: "./models/yolov8n.pt"
-    confidence_threshold: 0.5
-    iou_threshold: 0.45
-    device: "cpu"  # or "cuda" for GPU
+  thresholds:
+    min_plant_area: 300
+    max_plant_area: 18000
+    min_distance_peaks: 25
 
-# Preprocessing Configuration
-preprocessing:
-  target_size: null  # Keep original size, or [640, 640] for resizing
-  normalize: false
-  denoise: true
-  enhance_contrast: true
-  color_correction: false
+robustness_metrics:
+  thresholds:
+    rcs: 0.95
+    csc: 0.90
+    svs: 0.55
+    ari: 0.85
+  
+  sampling:
+    metrics_sample_rate: 0.10
+    downsample_factor: 0.5
 
-# Metrics Configuration
-metrics:
-  radial_counting_stability:
-    num_angles: 8
-    description: "Measures spatial prediction consistency under rotations"
-  
-  cross_scale_consistency:
-    scale_factors: [0.5, 0.75, 1.0, 1.25, 1.5]
-    description: "Evaluates robustness across different UAV flight altitudes"
-  
-  semantic_visual_stability:
-    boundary_weight: 0.6
-    coherence_weight: 0.4
-    description: "Quantifies segmentation coherence without ground truth"
-  
-  adaptive_repeatability_index:
-    num_augmentations: 10
-    description: "Assesses stochastic consistency under augmentations"
-
-# Experiment Settings
-experiments:
-  cvpr_optimized:
-    output_dir: "./results/cvpr_optimized"
-    visualize_samples: 5
-    save_intermediate: true
-  
-  classical_vs_yolov8:
-    output_dir: "./results/comparison"
-    max_images: null  # Process all images
-    visualize_samples: 5
-  
-  loropetalum_metrics:
-    output_dir: "./results/loropetalum_metrics"
-    generate_plots: true
-    save_individual_results: true
-  
-  strategy_evaluation:
-    output_dir: "./results/strategy_evaluation"
-    strategies:
-      - color_based
-      - no_color
-      - high_confidence
-      - low_confidence
-      - with_preprocessing
-
-# Visualization Settings
-visualization:
-  dpi: 150
-  figure_format: "png"
-  color_scheme: "husl"
-  radar_plot:
-    figsize: [8, 8]
-    ylim: [0, 1.0]
-  
-  comparison_plot:
-    figsize: [14, 6]
-    scatter_alpha: 0.6
-
-# Output Settings
-output:
-  save_detections: true
-  save_metrics: true
-  save_visualizations: true
-  save_reports: true
-  report_format: "txt"  # or "pdf", "html"
-
-# Performance Settings
-performance:
-  cache_size: 100
-  batch_size: 10
+processing:
+  batch_size: 4
   num_workers: 4
+  image_size: 640
+  max_images: null
 
-# Paper Reported Values (for reference)
-paper_results:
-  loropetalum:
-    rcs: 0.71
-    rcs_std: 0.04
-    csc: 0.92
-    csc_std: 0.05
-    svs: 0.62
-    svs_std: 0.05
-    ari: 0.41
-    ari_std: 0.09
-  
-  correlation:
-    spearman_rho: 0.87
-    p_value: 0.001
-    speedup: 26.8
+paths:
+  input_dir: "data/input"
+  output_dir: "results/output"
+  checkpoint_dir: "checkpoints"
+  visualization_dir: "visualizations"
