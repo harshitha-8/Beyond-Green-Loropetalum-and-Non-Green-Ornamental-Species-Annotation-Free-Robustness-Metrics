@@ -1,0 +1,44 @@
+# Experiment Configuration for CVPR 2026 Submission
+
+dataset:
+  name: "Loropetalum Chinese UAV Dataset"
+  total_images: 469
+  resolution: [4000, 3000]
+  average_plants_per_image: 1398
+  std_plants_per_image: 267
+  occlusion_range: [0.6, 0.8]
+
+model:
+  name: "EnhancedLoropetalumCounter"
+  backbone: "ResNet-50"
+  epochs: 100
+  optimizer: "Adam"
+  learning_rate: 0.0001
+  
+  thresholds:
+    min_plant_area: 300
+    max_plant_area: 18000
+    min_distance_peaks: 25
+
+robustness_metrics:
+  thresholds:
+    rcs: 0.95
+    csc: 0.90
+    svs: 0.55
+    ari: 0.85
+  
+  sampling:
+    metrics_sample_rate: 0.10
+    downsample_factor: 0.5
+
+processing:
+  batch_size: 4
+  num_workers: 4
+  image_size: 640
+  max_images: null
+
+paths:
+  input_dir: "data/input"
+  output_dir: "results/output"
+  checkpoint_dir: "checkpoints"
+  visualization_dir: "visualizations"

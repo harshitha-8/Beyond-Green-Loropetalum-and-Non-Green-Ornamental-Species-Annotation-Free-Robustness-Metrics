@@ -26,6 +26,20 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+# Data
+data/
+results/
+checkpoints/
+*.jpg
+*.jpeg
+*.png
+*.JPG
+*.JPEG
+*.PNG
+*.json
+*.pt
+*.pth
+
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
@@ -167,6 +181,16 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
