@@ -4,7 +4,7 @@ This storyboard reformats the ornamental-plant detection project into the same h
 
 ## Slide 1: Beyond Green: Annotation-Free Robustness Metrics for Non-Green Ornamental Plant Detection
 
-CVPR-style demonstration storyboard
+
 
 ## Slide 2: Detection Pipeline Demo Frame
 
@@ -22,34 +22,34 @@ System overview covering UAV image acquisition, adaptive color segmentation, sha
 
 ![Color Segmentation](../../assets/demo_stage_02_color_segmentation.png)
 
-Stage 2 from the original demonstration video. The pipeline highlights the initial color-based segmentation response used to separate ornamental canopy regions from the background before downstream filtering.
+High-resolution stage view showing the initial color-based canopy segmentation used to separate non-green ornamental plant regions from the background before downstream filtering.
 
 ## Slide 5: Shadow Removal
 
 ![Shadow Removal](../../assets/demo_stage_03_shadow_removal.png)
 
-Stage 3 from the original demonstration video. Shadow-suppressed processing removes darker nuisance structure while preserving the plant-related response required for stable counting.
+High-resolution shadow-suppressed response that removes darker nuisance structure while preserving the plant-related signal used for stable downstream counting.
 
 ## Slide 6: Morphological Cleaning
 
 ![Morphological Cleaning](../../assets/demo_stage_04_morphological_cleaning.png)
 
-Stage 4 from the original demonstration video. Morphological cleanup removes fragmented noise and keeps the more meaningful candidate regions aligned with the plant structure.
+High-resolution morphological cleanup stage that removes fragmented noise and keeps the more meaningful candidate regions aligned with the ornamental canopy structure.
 
 ## Slide 7: Distance Transform
 
 ![Distance Transform](../../assets/demo_stage_05_distance_transform.png)
 
-Stage 5 from the original demonstration video. The distance-transform response emphasizes compact local maxima that can seed instance-aware grouping across dense ornamental rows.
+High-resolution distance-transform response emphasizing compact local maxima that can seed instance-aware grouping across dense ornamental rows.
 
 ## Slide 8: Final Labels
 
 ![Final Labels](../../assets/demo_stage_06_final_labels.png)
 
-Stage 6 from the original demonstration video. Final connected labels reveal the grouped plant regions after the successive filtering and instance-generation steps.
+High-resolution connected-label visualization showing the grouped plant regions after the successive filtering and instance-generation steps.
 
 ## Slide 9: Final Detection
 
 ![Final Detection](../../assets/demo_stage_07_final_detection.png)
 
-Stage 7 from the original demonstration video. The final detection overlay shows the bounding-box result after the full pipeline has finished the ornamental plant counting process.
+High-resolution final detection overlay showing the bounding-box result after the full pipeline has finished the ornamental plant counting process.

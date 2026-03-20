@@ -5,7 +5,7 @@
     {
       "layout": "title",
       "title": "Beyond Green: Annotation-Free Robustness Metrics for Non-Green Ornamental Plant Detection",
-      "caption": "CVPR-style demonstration storyboard",
+      "caption": "",
       "source_label": "Title slide"
     },
     {
@@ -23,37 +23,37 @@
     {
       "title": "Color Segmentation",
       "image": "assets/demo_stage_02_color_segmentation.png",
-      "caption": "Stage 2 from the original demonstration video. The pipeline highlights the initial color-based segmentation response used to separate ornamental canopy regions from the background before downstream filtering.",
+      "caption": "High-resolution stage view showing the initial color-based canopy segmentation used to separate non-green ornamental plant regions from the background before downstream filtering.",
       "source_label": "Demonstration video stage 2"
     },
     {
       "title": "Shadow Removal",
       "image": "assets/demo_stage_03_shadow_removal.png",
-      "caption": "Stage 3 from the original demonstration video. Shadow-suppressed processing removes darker nuisance structure while preserving the plant-related response required for stable counting.",
+      "caption": "High-resolution shadow-suppressed response that removes darker nuisance structure while preserving the plant-related signal used for stable downstream counting.",
       "source_label": "Demonstration video stage 3"
     },
     {
       "title": "Morphological Cleaning",
       "image": "assets/demo_stage_04_morphological_cleaning.png",
-      "caption": "Stage 4 from the original demonstration video. Morphological cleanup removes fragmented noise and keeps the more meaningful candidate regions aligned with the plant structure.",
+      "caption": "High-resolution morphological cleanup stage that removes fragmented noise and keeps the more meaningful candidate regions aligned with the ornamental canopy structure.",
       "source_label": "Demonstration video stage 4"
     },
     {
       "title": "Distance Transform",
       "image": "assets/demo_stage_05_distance_transform.png",
-      "caption": "Stage 5 from the original demonstration video. The distance-transform response emphasizes compact local maxima that can seed instance-aware grouping across dense ornamental rows.",
+      "caption": "High-resolution distance-transform response emphasizing compact local maxima that can seed instance-aware grouping across dense ornamental rows.",
       "source_label": "Demonstration video stage 5"
     },
     {
       "title": "Final Labels",
       "image": "assets/demo_stage_06_final_labels.png",
-      "caption": "Stage 6 from the original demonstration video. Final connected labels reveal the grouped plant regions after the successive filtering and instance-generation steps.",
+      "caption": "High-resolution connected-label visualization showing the grouped plant regions after the successive filtering and instance-generation steps.",
       "source_label": "Demonstration video stage 6"
     },
     {
       "title": "Final Detection",
       "image": "assets/demo_stage_07_final_detection.png",
-      "caption": "Stage 7 from the original demonstration video. The final detection overlay shows the bounding-box result after the full pipeline has finished the ornamental plant counting process.",
+      "caption": "High-resolution final detection overlay showing the bounding-box result after the full pipeline has finished the ornamental plant counting process.",
       "source_label": "Demonstration video stage 7"
     }
   ]
