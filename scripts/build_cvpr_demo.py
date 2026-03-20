@@ -152,11 +152,6 @@ def render_slide(slide: dict[str, Any], index: int, total: int, output_path: Pat
     if not image_path.exists():
         raise FileNotFoundError(f"Missing slide image: {image_path}")
 
-    if slide.get("layout") == "image_only":
-        panel = resize_with_padding(Image.open(image_path), width, height)
-        panel.save(output_path, quality=95)
-        return
-
     panel = resize_with_padding(Image.open(image_path), image_box_width, image_box_height)
     background.paste(panel, (CARD_MARGIN, CARD_MARGIN))
 
