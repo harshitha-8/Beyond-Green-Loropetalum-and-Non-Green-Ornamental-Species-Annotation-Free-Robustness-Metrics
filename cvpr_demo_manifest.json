@@ -1,6 +1,6 @@
 {
-  "title": "CVPR Demo: Beyond Green Ornamental Plant Robustness Metrics",
-  "description": "This storyboard reformats the ornamental-plant detection project into the same high-resolution CVPR-style demo standard used in the Quantum-Feature-Selection repository, while following the step-by-step stage ordering shown in the original Demonstration_video.mp4 after the first three slides.",
+  "title": "Beyond Green Ornamental Plant Robustness Metrics Demo",
+  "description": "This storyboard keeps the first three presentation slides and then follows the five high-resolution processing stages used for the ornamental plant detection demo from frame 4 onward.",
   "slides": [
     {
       "layout": "title",
@@ -23,38 +23,32 @@
     {
       "title": "Color Segmentation",
       "image": "assets/demo_stage_02_color_segmentation.png",
-      "caption": "High-resolution stage view showing the initial color-based canopy segmentation used to separate non-green ornamental plant regions from the background before downstream filtering.",
+      "caption": "High-resolution binary canopy segmentation showing the first dense extraction of burgundy ornamental plant regions from the UAV scene.",
       "source_label": "Demonstration video stage 2"
-    },
-    {
-      "title": "Shadow Removal",
-      "image": "assets/demo_stage_03_shadow_removal.png",
-      "caption": "High-resolution shadow-suppressed response that removes darker nuisance structure while preserving the plant-related signal used for stable downstream counting.",
-      "source_label": "Demonstration video stage 3"
     },
     {
       "title": "Morphological Cleaning",
       "image": "assets/demo_stage_04_morphological_cleaning.png",
-      "caption": "High-resolution morphological cleanup stage that removes fragmented noise and keeps the more meaningful candidate regions aligned with the ornamental canopy structure.",
-      "source_label": "Demonstration video stage 4"
+      "caption": "High-resolution cleaned mask after the structural filtering stage removes small fragments and preserves the plant instances used in later counting.",
+      "source_label": "Demonstration video stage 3"
     },
     {
       "title": "Distance Transform",
       "image": "assets/demo_stage_05_distance_transform.png",
-      "caption": "High-resolution distance-transform response emphasizing compact local maxima that can seed instance-aware grouping across dense ornamental rows.",
-      "source_label": "Demonstration video stage 5"
+      "caption": "High-resolution distance-transform response emphasizing the instance centers inside the cleaned ornamental canopy regions.",
+      "source_label": "Demonstration video stage 4"
     },
     {
       "title": "Final Labels",
       "image": "assets/demo_stage_06_final_labels.png",
-      "caption": "High-resolution connected-label visualization showing the grouped plant regions after the successive filtering and instance-generation steps.",
-      "source_label": "Demonstration video stage 6"
+      "caption": "High-resolution connected-label map showing the instance-separated plant regions retained for the final counting result.",
+      "source_label": "Demonstration video stage 5"
     },
     {
       "title": "Final Detection",
       "image": "assets/demo_stage_07_final_detection.png",
-      "caption": "High-resolution final detection overlay showing the bounding-box result after the full pipeline has finished the ornamental plant counting process.",
-      "source_label": "Demonstration video stage 7"
+      "caption": "High-resolution final detection overlay showing the complete box-based count over the ornamental rows.",
+      "source_label": "Demonstration video stage 6"
     }
   ]
 }

@@ -24,7 +24,7 @@ LINE_COLOR = "#d2d8df"
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Build a CVPR-style storyboard and MP4 for the Beyond Green demo."
+        description="Build the storyboard and MP4 for the Beyond Green demo."
     )
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)

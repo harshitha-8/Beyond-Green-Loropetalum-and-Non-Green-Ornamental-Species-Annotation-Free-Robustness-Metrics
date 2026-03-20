@@ -44,9 +44,9 @@ https://anonymous.4open.science/r/Beyond-Green-Loropetalum-and-Non-Green-Ornamen
 
 </div>
 
-## CVPR-Style Demo Package
+## Demo Package
 
-A high-resolution CVPR-style storyboard demo has been generated in:
+A high-resolution storyboard demo has been generated in:
 
 - `results/cvpr_demo/cvpr_demo.mp4`
 - `results/cvpr_demo/index.html`

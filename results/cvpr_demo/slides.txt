@@ -14,6 +14,4 @@ file '/Volumes/T9/tech cotton 3d /repos/Beyond-Green-Loropetalum-and-Non-Green-O
 duration 4.500
 file '/Volumes/T9/tech cotton 3d /repos/Beyond-Green-Loropetalum-and-Non-Green-Ornamental-Species-Annotation-Free-Robustness-Metrics/results/cvpr_demo/frames/slide_08.png'
 duration 4.500
-file '/Volumes/T9/tech cotton 3d /repos/Beyond-Green-Loropetalum-and-Non-Green-Ornamental-Species-Annotation-Free-Robustness-Metrics/results/cvpr_demo/frames/slide_09.png'
-duration 4.500
-file '/Volumes/T9/tech cotton 3d /repos/Beyond-Green-Loropetalum-and-Non-Green-Ornamental-Species-Annotation-Free-Robustness-Metrics/results/cvpr_demo/frames/slide_09.png'
+file '/Volumes/T9/tech cotton 3d /repos/Beyond-Green-Loropetalum-and-Non-Green-Ornamental-Species-Annotation-Free-Robustness-Metrics/results/cvpr_demo/frames/slide_08.png'

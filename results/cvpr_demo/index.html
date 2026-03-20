@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CVPR Demo: Beyond Green Ornamental Plant Robustness Metrics</title>
+  <title>Beyond Green Ornamental Plant Robustness Metrics Demo</title>
   <style>
     :root {
       --bg: #ffffff;
@@ -31,18 +31,18 @@
 </head>
 <body>
   <main>
-    <h1>CVPR Demo: Beyond Green Ornamental Plant Robustness Metrics</h1>
-    <p class="intro">This storyboard reformats the ornamental-plant detection project into the same high-resolution CVPR-style demo standard used in the Quantum-Feature-Selection repository, while following the step-by-step stage ordering shown in the original Demonstration_video.mp4 after the first three slides.</p>
+    <h1>Beyond Green Ornamental Plant Robustness Metrics Demo</h1>
+    <p class="intro">This storyboard keeps the first three presentation slides and then follows the five high-resolution processing stages used for the ornamental plant detection demo from frame 4 onward.</p>
     
             <section class="slide">
-              <div class="meta">1 / 9 · Title slide</div>
+              <div class="meta">1 / 8 · Title slide</div>
               <h2>Beyond Green: Annotation-Free Robustness Metrics for Non-Green Ornamental Plant Detection</h2>
               
               <p></p>
             </section>
             
             <section class="slide">
-              <div class="meta">2 / 9 · Existing demo video</div>
+              <div class="meta">2 / 8 · Existing demo video</div>
               <h2>Detection Pipeline Demo Frame</h2>
               
               <div class="image-wrap">
@@ -53,7 +53,7 @@
             </section>
             
             <section class="slide">
-              <div class="meta">3 / 9 · Framework figure</div>
+              <div class="meta">3 / 8 · Framework figure</div>
               <h2>Annotation-Free Robustness Framework</h2>
               
               <div class="image-wrap">
@@ -64,69 +64,58 @@
             </section>
             
             <section class="slide">
-              <div class="meta">4 / 9 · Demonstration video stage 2</div>
+              <div class="meta">4 / 8 · Demonstration video stage 2</div>
               <h2>Color Segmentation</h2>
               
               <div class="image-wrap">
                 <img src="../../assets/demo_stage_02_color_segmentation.png" alt="Color Segmentation">
               </div>
             
-              <p>High-resolution stage view showing the initial color-based canopy segmentation used to separate non-green ornamental plant regions from the background before downstream filtering.</p>
+              <p>High-resolution binary canopy segmentation showing the first dense extraction of burgundy ornamental plant regions from the UAV scene.</p>
             </section>
             
             <section class="slide">
-              <div class="meta">5 / 9 · Demonstration video stage 3</div>
-              <h2>Shadow Removal</h2>
-              
-              <div class="image-wrap">
-                <img src="../../assets/demo_stage_03_shadow_removal.png" alt="Shadow Removal">
-              </div>
-            
-              <p>High-resolution shadow-suppressed response that removes darker nuisance structure while preserving the plant-related signal used for stable downstream counting.</p>
-            </section>
-            
-            <section class="slide">
-              <div class="meta">6 / 9 · Demonstration video stage 4</div>
+              <div class="meta">5 / 8 · Demonstration video stage 3</div>
               <h2>Morphological Cleaning</h2>
               
               <div class="image-wrap">
                 <img src="../../assets/demo_stage_04_morphological_cleaning.png" alt="Morphological Cleaning">
               </div>
             
-              <p>High-resolution morphological cleanup stage that removes fragmented noise and keeps the more meaningful candidate regions aligned with the ornamental canopy structure.</p>
+              <p>High-resolution cleaned mask after the structural filtering stage removes small fragments and preserves the plant instances used in later counting.</p>
             </section>
             
             <section class="slide">
-              <div class="meta">7 / 9 · Demonstration video stage 5</div>
+              <div class="meta">6 / 8 · Demonstration video stage 4</div>
               <h2>Distance Transform</h2>
               
               <div class="image-wrap">
                 <img src="../../assets/demo_stage_05_distance_transform.png" alt="Distance Transform">
               </div>
             
-              <p>High-resolution distance-transform response emphasizing compact local maxima that can seed instance-aware grouping across dense ornamental rows.</p>
+              <p>High-resolution distance-transform response emphasizing the instance centers inside the cleaned ornamental canopy regions.</p>
             </section>
             
             <section class="slide">
-              <div class="meta">8 / 9 · Demonstration video stage 6</div>
+              <div class="meta">7 / 8 · Demonstration video stage 5</div>
               <h2>Final Labels</h2>
               
               <div class="image-wrap">
                 <img src="../../assets/demo_stage_06_final_labels.png" alt="Final Labels">
               </div>
             
-              <p>High-resolution connected-label visualization showing the grouped plant regions after the successive filtering and instance-generation steps.</p>
+              <p>High-resolution connected-label map showing the instance-separated plant regions retained for the final counting result.</p>
             </section>
             
             <section class="slide">
-              <div class="meta">9 / 9 · Demonstration video stage 7</div>
+              <div class="meta">8 / 8 · Demonstration video stage 6</div>
               <h2>Final Detection</h2>
               
               <div class="image-wrap">
                 <img src="../../assets/demo_stage_07_final_detection.png" alt="Final Detection">
               </div>
             
-              <p>High-resolution final detection overlay showing the bounding-box result after the full pipeline has finished the ornamental plant counting process.</p>
+              <p>High-resolution final detection overlay showing the complete box-based count over the ornamental rows.</p>
             </section>
             
   </main>

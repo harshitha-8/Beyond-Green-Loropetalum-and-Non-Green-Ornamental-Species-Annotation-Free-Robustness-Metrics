@@ -1,6 +1,6 @@
-# CVPR Demo: Beyond Green Ornamental Plant Robustness Metrics
+# Beyond Green Ornamental Plant Robustness Metrics Demo
 
-This storyboard reformats the ornamental-plant detection project into the same high-resolution CVPR-style demo standard used in the Quantum-Feature-Selection repository, while following the step-by-step stage ordering shown in the original Demonstration_video.mp4 after the first three slides.
+This storyboard keeps the first three presentation slides and then follows the five high-resolution processing stages used for the ornamental plant detection demo from frame 4 onward.
 
 ## Slide 1: Beyond Green: Annotation-Free Robustness Metrics for Non-Green Ornamental Plant Detection
 
@@ -22,34 +22,28 @@ System overview covering UAV image acquisition, adaptive color segmentation, sha
 
 ![Color Segmentation](../../assets/demo_stage_02_color_segmentation.png)
 
-High-resolution stage view showing the initial color-based canopy segmentation used to separate non-green ornamental plant regions from the background before downstream filtering.
+High-resolution binary canopy segmentation showing the first dense extraction of burgundy ornamental plant regions from the UAV scene.
 
-## Slide 5: Shadow Removal
-
-![Shadow Removal](../../assets/demo_stage_03_shadow_removal.png)
-
-High-resolution shadow-suppressed response that removes darker nuisance structure while preserving the plant-related signal used for stable downstream counting.
-
-## Slide 6: Morphological Cleaning
+## Slide 5: Morphological Cleaning
 
 ![Morphological Cleaning](../../assets/demo_stage_04_morphological_cleaning.png)
 
-High-resolution morphological cleanup stage that removes fragmented noise and keeps the more meaningful candidate regions aligned with the ornamental canopy structure.
+High-resolution cleaned mask after the structural filtering stage removes small fragments and preserves the plant instances used in later counting.
 
-## Slide 7: Distance Transform
+## Slide 6: Distance Transform
 
 ![Distance Transform](../../assets/demo_stage_05_distance_transform.png)
 
-High-resolution distance-transform response emphasizing compact local maxima that can seed instance-aware grouping across dense ornamental rows.
+High-resolution distance-transform response emphasizing the instance centers inside the cleaned ornamental canopy regions.
 
-## Slide 8: Final Labels
+## Slide 7: Final Labels
 
 ![Final Labels](../../assets/demo_stage_06_final_labels.png)
 
-High-resolution connected-label visualization showing the grouped plant regions after the successive filtering and instance-generation steps.
+High-resolution connected-label map showing the instance-separated plant regions retained for the final counting result.
 
-## Slide 9: Final Detection
+## Slide 8: Final Detection
 
 ![Final Detection](../../assets/demo_stage_07_final_detection.png)
 
-High-resolution final detection overlay showing the bounding-box result after the full pipeline has finished the ornamental plant counting process.
+High-resolution final detection overlay showing the complete box-based count over the ornamental rows.
