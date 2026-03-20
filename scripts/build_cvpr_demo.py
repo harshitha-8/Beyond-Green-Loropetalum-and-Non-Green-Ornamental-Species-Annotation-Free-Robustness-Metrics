@@ -28,7 +28,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
-    parser.add_argument("--seconds-per-slide", type=float, default=3.0)
+    parser.add_argument("--seconds-per-slide", type=float, default=2.0)
     parser.add_argument("--fps", type=int, default=30)
     parser.add_argument("--skip-video", action="store_true")
     return parser.parse_args()
