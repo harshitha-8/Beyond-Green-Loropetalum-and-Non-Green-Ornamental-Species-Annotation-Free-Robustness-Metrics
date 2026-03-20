@@ -191,6 +191,21 @@ cython_debug/
 # OS
 .DS_Store
 Thumbs.db
+._*
+tmp_demo_frames/
+
+# Keep the CVPR demo package tracked.
+!cvpr_demo_manifest.json
+!assets/demo_first_frame.png
+!assets/demo_stage_02_color_segmentation.png
+!assets/demo_stage_03_shadow_removal.png
+!assets/demo_stage_04_morphological_cleaning.png
+!assets/demo_stage_05_distance_transform.png
+!assets/demo_stage_06_final_labels.png
+!assets/demo_stage_07_final_detection.png
+!results/
+!results/cvpr_demo/
+!results/cvpr_demo/**
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can

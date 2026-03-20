@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CVPR Demo: Beyond Green Ornamental Plant Robustness Metrics</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --panel: #ffffff;
+      --line: #d2d8df;
+      --text: #111111;
+      --muted: #5c6670;
+      --accent: #27313b;
+    }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+    main { max-width: 1200px; margin: 0 auto; padding: 40px 24px 72px; }
+    h1 { font-size: 2.6rem; margin-bottom: 10px; }
+    .intro { color: var(--muted); line-height: 1.7; max-width: 900px; margin-bottom: 30px; }
+    .slide { background: var(--panel); border: 1px solid var(--line); padding: 24px; margin-bottom: 28px; }
+    .meta { color: var(--accent); font-size: 0.95rem; margin-bottom: 10px; }
+    .image-wrap { background: #ffffff; padding: 14px; margin: 18px 0; border: 1px solid var(--line); }
+    img { display: block; width: 100%; }
+    p { line-height: 1.75; color: #2c3640; font-size: 1.06rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>CVPR Demo: Beyond Green Ornamental Plant Robustness Metrics</h1>
+    <p class="intro">This storyboard reformats the ornamental-plant detection project into the same high-resolution CVPR-style demo standard used in the Quantum-Feature-Selection repository, while following the step-by-step stage ordering shown in the original Demonstration_video.mp4 after the first three slides.</p>
+    
+            <section class="slide">
+              <div class="meta">1 / 9 · Title slide</div>
+              <h2>Beyond Green: Annotation-Free Robustness Metrics for Non-Green Ornamental Plant Detection</h2>
+              
+              <p>CVPR-style demonstration storyboard</p>
+            </section>
+            
+            <section class="slide">
+              <div class="meta">2 / 9 · Existing demo video</div>
+              <h2>Detection Pipeline Demo Frame</h2>
+              
+              <div class="image-wrap">
+                <img src="../../assets/demo_first_frame.png" alt="Detection Pipeline Demo Frame">
+              </div>
+            
+              <p>Opening frame from the original project demo video, showing the UAV perspective over burgundy Loropetalum rows before the downstream detection and robustness analysis stages are presented.</p>
+            </section>
+            
+            <section class="slide">
+              <div class="meta">3 / 9 · Framework figure</div>
+              <h2>Annotation-Free Robustness Framework</h2>
+              
+              <div class="image-wrap">
+                <img src="../../assets/CVPR_Architecture.png" alt="Annotation-Free Robustness Framework">
+              </div>
+            
+              <p>System overview covering UAV image acquisition, adaptive color segmentation, shadow and soil removal, morphological cleanup, watershed-based instance grouping, and the annotation-free evaluation metrics RCS, CSC, SVS, and ARI.</p>
+            </section>
+            
+            <section class="slide">
+              <div class="meta">4 / 9 · Demonstration video stage 2</div>
+              <h2>Color Segmentation</h2>
+              
+              <div class="image-wrap">
+                <img src="../../assets/demo_stage_02_color_segmentation.png" alt="Color Segmentation">
+              </div>
+            
+              <p>Stage 2 from the original demonstration video. The pipeline highlights the initial color-based segmentation response used to separate ornamental canopy regions from the background before downstream filtering.</p>
+            </section>
+            
+            <section class="slide">
+              <div class="meta">5 / 9 · Demonstration video stage 3</div>
+              <h2>Shadow Removal</h2>
+              
+              <div class="image-wrap">
+                <img src="../../assets/demo_stage_03_shadow_removal.png" alt="Shadow Removal">
+              </div>
+            
+              <p>Stage 3 from the original demonstration video. Shadow-suppressed processing removes darker nuisance structure while preserving the plant-related response required for stable counting.</p>
+            </section>
+            
+            <section class="slide">
+              <div class="meta">6 / 9 · Demonstration video stage 4</div>
+              <h2>Morphological Cleaning</h2>
+              
+              <div class="image-wrap">
+                <img src="../../assets/demo_stage_04_morphological_cleaning.png" alt="Morphological Cleaning">
+              </div>
+            
+              <p>Stage 4 from the original demonstration video. Morphological cleanup removes fragmented noise and keeps the more meaningful candidate regions aligned with the plant structure.</p>
+            </section>
+            
+            <section class="slide">
+              <div class="meta">7 / 9 · Demonstration video stage 5</div>
+              <h2>Distance Transform</h2>
+              
+              <div class="image-wrap">
+                <img src="../../assets/demo_stage_05_distance_transform.png" alt="Distance Transform">
+              </div>
+            
+              <p>Stage 5 from the original demonstration video. The distance-transform response emphasizes compact local maxima that can seed instance-aware grouping across dense ornamental rows.</p>
+            </section>
+            
+            <section class="slide">
+              <div class="meta">8 / 9 · Demonstration video stage 6</div>
+              <h2>Final Labels</h2>
+              
+              <div class="image-wrap">
+                <img src="../../assets/demo_stage_06_final_labels.png" alt="Final Labels">
+              </div>
+            
+              <p>Stage 6 from the original demonstration video. Final connected labels reveal the grouped plant regions after the successive filtering and instance-generation steps.</p>
+            </section>
+            
+            <section class="slide">
+              <div class="meta">9 / 9 · Demonstration video stage 7</div>
+              <h2>Final Detection</h2>
+              
+              <div class="image-wrap">
+                <img src="../../assets/demo_stage_07_final_detection.png" alt="Final Detection">
+              </div>
+            
+              <p>Stage 7 from the original demonstration video. The final detection overlay shows the bounding-box result after the full pipeline has finished the ornamental plant counting process.</p>
+            </section>
+            
+  </main>
+</body>
+</html>
