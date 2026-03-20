@@ -89,6 +89,18 @@ def resize_with_padding(image: Image.Image, target_width: int, target_height: in
     return canvas
 
 
+def resize_with_cover(image: Image.Image, target_width: int, target_height: int) -> Image.Image:
+    image = image.convert("RGB")
+    scale = max(target_width / image.width, target_height / image.height)
+    resized = image.resize(
+        (max(1, int(image.width * scale)), max(1, int(image.height * scale))),
+        Image.LANCZOS,
+    )
+    left = max(0, (resized.width - target_width) // 2)
+    top = max(0, (resized.height - target_height) // 2)
+    return resized.crop((left, top, left + target_width, top + target_height))
+
+
 def make_background(size: tuple[int, int]) -> Image.Image:
     return Image.new("RGB", size, BG_COLOR)
 
@@ -152,7 +164,8 @@ def render_slide(slide: dict[str, Any], index: int, total: int, output_path: Pat
     if not image_path.exists():
         raise FileNotFoundError(f"Missing slide image: {image_path}")
 
-    panel = resize_with_padding(Image.open(image_path), image_box_width, image_box_height)
+    resize_fn = resize_with_cover if slide.get("layout") == "cover_image" else resize_with_padding
+    panel = resize_fn(Image.open(image_path), image_box_width, image_box_height)
     background.paste(panel, (CARD_MARGIN, CARD_MARGIN))
 
     draw.rectangle(

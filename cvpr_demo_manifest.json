@@ -45,6 +45,7 @@
       "source_label": "Demonstration video stage 5"
     },
     {
+      "layout": "cover_image",
       "title": "Final Detection",
       "image": "assets/demo_stage_07_final_detection.png",
       "caption": "High-resolution final detection overlay using the provided Total Plants: 1444 frame, showing the complete box-based count over the ornamental rows.",
