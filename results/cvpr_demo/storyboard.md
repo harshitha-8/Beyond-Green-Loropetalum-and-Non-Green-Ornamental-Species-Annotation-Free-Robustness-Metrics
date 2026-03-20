@@ -46,4 +46,4 @@ High-resolution connected-label map showing the instance-separated plant regions
 
 ![Final Detection](../../assets/demo_stage_07_final_detection.png)
 
-High-resolution final detection overlay showing the complete box-based count over the ornamental rows.
+High-resolution final detection overlay using the provided Total Plants: 1444 frame, showing the complete box-based count over the ornamental rows.

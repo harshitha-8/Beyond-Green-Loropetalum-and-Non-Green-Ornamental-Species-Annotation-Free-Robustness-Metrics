@@ -83,7 +83,7 @@ def resize_with_padding(image: Image.Image, target_width: int, target_height: in
         (max(1, int(image.width * scale)), max(1, int(image.height * scale))),
         Image.LANCZOS,
     )
-    canvas = Image.new("RGB", (target_width, target_height), "#ffffff")
+    canvas = Image.new("RGB", (target_width, target_height), "#08111d")
     offset = ((target_width - resized.width) // 2, (target_height - resized.height) // 2)
     canvas.paste(resized, offset)
     return canvas
@@ -98,8 +98,8 @@ def render_title_slide(slide: dict[str, Any], index: int, total: int, output_pat
     background = make_background(VIDEO_SIZE)
     draw = ImageDraw.Draw(background)
 
-    title_font = load_font(24, bold=False)
-    subtitle_font = load_font(24, bold=False)
+    title_font = load_font(25, bold=False)
+    subtitle_font = load_font(18, bold=False)
     meta_font = load_font(23)
 
     title = slide["title"]
@@ -142,8 +142,8 @@ def render_slide(slide: dict[str, Any], index: int, total: int, output_path: Pat
     background = make_background(VIDEO_SIZE)
     draw = ImageDraw.Draw(background)
 
-    title_font = load_font(24, bold=False)
-    body_font = load_font(24)
+    title_font = load_font(48, bold=True)
+    body_font = load_font(30)
     meta_font = load_font(23)
 
     image_box_width = width - (CARD_MARGIN * 2)
@@ -164,10 +164,10 @@ def render_slide(slide: dict[str, Any], index: int, total: int, output_path: Pat
     caption_top = CARD_MARGIN + image_box_height + 34
     draw.line((CARD_MARGIN, caption_top - 16, width - CARD_MARGIN, caption_top - 16), fill=LINE_COLOR, width=2)
     draw.text((CARD_MARGIN, caption_top + 8), slide["title"], font=title_font, fill=TITLE_COLOR)
-    body_y = caption_top + 64
+    body_y = caption_top + 86
     for line in wrap_text(draw, slide["caption"], body_font, image_box_width - 56)[:4]:
         draw.text((CARD_MARGIN, body_y), line, font=body_font, fill=TEXT_COLOR)
-        body_y += 34
+        body_y += 40
 
     footer = f"Slide {index}/{total}   |   {slide.get('source_label', 'Project figure')}"
     draw.text((CARD_MARGIN, height - CARD_MARGIN - 32), footer, font=meta_font, fill=ACCENT_COLOR)
