@@ -98,7 +98,7 @@ def render_title_slide(slide: dict[str, Any], index: int, total: int, output_pat
     background = make_background(VIDEO_SIZE)
     draw = ImageDraw.Draw(background)
 
-    title_font = load_font(25, bold=False)
+    title_font = load_font(24, bold=False)
     subtitle_font = load_font(18, bold=False)
     meta_font = load_font(23)
 
