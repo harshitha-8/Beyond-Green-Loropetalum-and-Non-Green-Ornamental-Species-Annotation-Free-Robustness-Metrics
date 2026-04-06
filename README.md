@@ -3,7 +3,7 @@
 <p align="center"><b>Accepted Poster - CVPR 2026 Workshop V4A (Agriculture Vision 2026)</b></p>
 
 <p align="center">
-  <a href="https://openreview.net/forum?id=SD6FZaEJAH"><img src="https://img.shields.io/badge/OpenReview-Paper-b31b1b" alt="OpenReview Paper"></a>
+  <a href="https://openreview.net/pdf?id=SD6FZaEJAH"><img src="https://img.shields.io/badge/OpenReview-PDF-b31b1b" alt="OpenReview PDF"></a>
   <a href="https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop/V4A&referrer=%5BHomepage%5D(%2F)#tab-accept-poster"><img src="https://img.shields.io/badge/CVPR_2026-V4A_Accepted_Poster-0a7f5a" alt="CVPR V4A Accepted Poster"></a>
   <a href="https://www.agriculture-vision.com/agriculture-vision-2026"><img src="https://img.shields.io/badge/Workshop-Agriculture_Vision_2026-2f6cad" alt="Agriculture Vision 2026"></a>
   <a href="https://htmlpreview.github.io/?https://github.com/harshitha-8/Beyond-Green-Loropetalum-and-Non-Green-Ornamental-Species-Annotation-Free-Robustness-Metrics/blob/main/web/cvpr_demo_showcase.html"><img src="https://img.shields.io/badge/Live_Web_Demo-Open-1f7a8c" alt="Live Web Demo"></a>
@@ -203,7 +203,7 @@ Machine-readable citation metadata is provided in [`CITATION.cff`](CITATION.cff)
   booktitle = {CVPR 2026 Workshops (V4A)},
   year      = {2026},
   note      = {Accepted poster},
-  url       = {https://openreview.net/forum?id=SD6FZaEJAH}
+  url       = {https://openreview.net/pdf?id=SD6FZaEJAH}
 }
 ```
 
