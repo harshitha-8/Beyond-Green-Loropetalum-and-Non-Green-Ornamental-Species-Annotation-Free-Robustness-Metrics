@@ -11,9 +11,7 @@
 </p>
 
 <p align="center">
-Harshitha Manjunatha<sup>1</sup>, Prabha Sundaravadivel<sup>2*</sup>, Shekhar Suman Borah<sup>2</sup>, Lakshman Tamil<sup>1</sup>, Patricia R. Knight<sup>3</sup>, H. Allen Torbert<sup>4</sup>, Siva P. Kumpatla<sup>4</sup><br>
-<sup>1</sup>The University of Texas at Dallas, USA | <sup>2</sup>The University of Texas at Tyler, USA | <sup>3</sup>Mississippi State University, USA | <sup>4</sup>USDA Agricultural Research Service (ARS), USA<br>
-<sup>*</sup>Corresponding author: psundaravadivel@uttyler.edu
+Harshitha Manjunatha, Prabha Sundaravadivel, Shekhar Suman Borah, Lakshman Tamil, Patricia R. Knight, H. Allen Torbert, Siva P. Kumpatla
 </p>
 
 This repository is aligned to the camera-ready version of the accepted CVPR 2026 V4A workshop paper.
@@ -50,7 +48,7 @@ If you want to collaborate on UAV and remote-sensing robustness, I would be glad
 
 ## Highlights from the CVPR Paper
 
-- Dataset scale: `469` UAV images (`4000x3000`) with dense canopies and `60-80%` occlusion.
+- Dataset scale: UAV images (`4000x3000`) with dense canopies and `60-80%` occlusion.
 - Baseline counting model (test set): `MAE = 23.7 +/- 8.2`, `RMSE = 31.4`, relative error `1.85%` (mean count `1,412`).
 - Production thresholds recommended by the paper:
   - `RCS > 0.95`
