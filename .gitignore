@@ -203,6 +203,9 @@ tmp_demo_frames/
 !assets/demo_stage_05_distance_transform.png
 !assets/demo_stage_06_final_labels.png
 !assets/demo_stage_07_final_detection.png
+!assets/paper_figures/
+!assets/paper_figures/*.png
+!assets/paper_figures/*.jpg
 !results/
 !results/cvpr_demo/
 !results/cvpr_demo/**

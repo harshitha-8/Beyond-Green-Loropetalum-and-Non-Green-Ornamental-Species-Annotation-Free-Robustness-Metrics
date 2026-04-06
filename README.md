@@ -28,6 +28,25 @@ Counting and segmenting dense plants in UAV imagery is difficult under occlusion
 
 On 469 high-resolution *Loropetalum chinense* UAV images (average ~1,398 plants/frame, max 1,789), the framework shows strong correlation with deployment success (`rho = 0.87`, `p < 0.001`) and reduces validation time by about `15x` compared to full manual annotation (`190-380 min/image`). Within the metric pipeline, CLIP-based stratified sampling provides about `35x` computational speedup.
 
+## Why This Work Matters
+
+- Moves beyond single-number accuracy by measuring robustness under spatial, scale, semantic, and stochastic variations.
+- Targets hard real-world conditions: dense canopies, non-green foliage, shadow noise, and severe occlusion.
+- Connects research metrics to deployment outcomes: when all four thresholds pass, observed failure rate drops substantially.
+
+## For Recruiters and Collaborators
+
+I am **Harshitha Manjunatha**, and this project represents how I approach computer vision work end-to-end:
+
+- Problem framing from field constraints, not only benchmark assumptions.
+- Method design with interpretable, deployment-oriented metrics.
+- Practical tooling with reproducible scripts, visual diagnostics, and documentation.
+
+If you are hiring for roles in **Computer Vision, ML Research, Applied AI, or Agricultural AI**, or want to collaborate on UAV/remote-sensing robustness, I would be glad to connect.
+
+- Direct contact: `harshitha.m@utdallas.edu`
+- Project issues/discussions: this repository
+
 ## Highlights from the Camera-Ready Paper
 
 - Dataset scale: `469` UAV images (`4000x3000`) with dense canopies and `60-80%` occlusion.
@@ -78,6 +97,36 @@ python scripts/build_cvpr_demo.py --manifest cvpr_demo_manifest.json --output-di
 | PlantNet Purple | 800 | 0.57 +/- 0.22 | 0.69 +/- 0.33 | 0.52 +/- 0.16 | 0.29 +/- 0.23 |
 
 Note: Table 1 uses absolute aggregate statistics on the Loropetalum benchmark, while Table 2 is min-max normalized for cross-dataset comparison and is not directly comparable to Table 1.
+
+## Paper Figure Gallery
+
+All images below were extracted from the camera-ready PDF and optimized for repository viewing.
+
+### Figure 1: Self-Validated Counting Pipeline
+
+![Figure 1 pipeline](assets/paper_figures/figure_1_pipeline_overview.png)
+
+### Figure 2: Domain-Aware Architecture
+
+![Figure 2 architecture](assets/paper_figures/figure_2_domain_aware_architecture.png)
+
+### Figure 3 and Figure 4: Real UAV Field Conditions
+
+![Figure 3 orthomosaic](assets/paper_figures/figure_3_uav_orthomosaic_field_challenges.jpg)
+![Figure 4 instance detection](assets/paper_figures/figure_4_instance_detection_field_conditions.jpg)
+
+### Figure 5: Cross-Dataset Robustness Profiles
+
+![Figure 5 cross-dataset profiles](assets/paper_figures/figure_5_cross_dataset_robustness_profiles.png)
+
+### Figure 6 and Figure 7: Metric Relationships and Robustness Signatures
+
+![Figure 6 correlation heatmap](assets/paper_figures/figure_6_metric_correlation_heatmap.png)
+![Figure 7 radar profiles](assets/paper_figures/figure_7_multidimensional_radar_profiles.png)
+
+### Figure 8: Sequential Detection Workflow
+
+![Figure 8 workflow](assets/paper_figures/figure_8_sequential_detection_workflow.png)
 
 ## Installation
 
