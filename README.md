@@ -48,7 +48,7 @@ If you want to collaborate on UAV and remote-sensing robustness, I would be glad
 - Direct contact: `Harshitha.Manjunatha@UTDallas.edu`
 - Project issues/discussions: this repository
 
-## Highlights from the Camera-Ready Paper
+## Highlights from the CVPR Paper
 
 - Dataset scale: `469` UAV images (`4000x3000`) with dense canopies and `60-80%` occlusion.
 - Baseline counting model (test set): `MAE = 23.7 +/- 8.2`, `RMSE = 31.4`, relative error `1.85%` (mean count `1,412`).
