@@ -1,125 +1,160 @@
-<h1 align="center"> Beyond Green: Annotation-Free Robustness Metrics for Non-Green Ornamental Plant Detection </h1>
+<h1 align="center">Beyond Green: Domain-Aware Self-Validated Instance Counting for Loropetalum and Non-Green Ornamental Species using Annotation-Free Robustness Metrics</h1>
 
-<div align="center">
+<p align="center"><b>Accepted Poster - CVPR 2026 Workshop V4A (Agriculture Vision 2026)</b></p>
 
-**Domain-Aware Self-Validated Instance Counting for *Loropetalum* and Non-Green Ornamental Species**
+<p align="center">
+  <a href="https://openreview.net/forum?id=SD6FZaEJAH"><img src="https://img.shields.io/badge/OpenReview-Paper-b31b1b" alt="OpenReview Paper"></a>
+  <a href="https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop/V4A&referrer=%5BHomepage%5D(%2F)#tab-accept-poster"><img src="https://img.shields.io/badge/CVPR_2026-V4A_Accepted_Poster-0a7f5a" alt="CVPR V4A Accepted Poster"></a>
+  <a href="https://www.agriculture-vision.com/agriculture-vision-2026"><img src="https://img.shields.io/badge/Workshop-Agriculture_Vision_2026-2f6cad" alt="Agriculture Vision 2026"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License"></a>
+</p>
 
-[XXXX-1](XXXX-6)<sup>1</sup>,
-[XXXX-2](https://scholar.google.com/citations?user=YOUR_ID)<sup>1†</sup>,
-[XXXX-3](https://scholar.google.com/citations?user=BQJE_UIAAAAJ)<sup>2</sup>
+<p align="center">
+Harshitha Manjunatha<sup>1</sup>, Prabha Sundaravadivel<sup>2*</sup>, Shekhar Suman Borah<sup>2</sup>, Lakshman Tamil<sup>1</sup>, Patricia R. Knight<sup>3</sup>, H. Allen Torbert<sup>4</sup>, Siva P. Kumpatla<sup>4</sup><br>
+<sup>1</sup>The University of Texas at Dallas, USA | <sup>2</sup>The University of Texas at Tyler, USA | <sup>3</sup>Mississippi State University, USA | <sup>4</sup>USDA Agricultural Research Service (ARS), USA<br>
+<sup>*</sup>Corresponding author: psundaravadivel@uttyler.edu
+</p>
 
-<sup>1</sup> XXXX-4, <sup>2</sup> XXXX-5         
-(†) Corresponding author.
+This repository is aligned to the camera-ready version of the accepted CVPR 2026 V4A workshop paper.
 
-</div>
+## Abstract
 
-<div align="center">
+Counting and segmenting dense plants in UAV imagery is difficult under occlusion, color variation, and lighting changes. This work introduces an annotation-free robustness evaluation framework with four complementary metrics:
 
-<a href="https://openreview.net/forum?id=SD6FZaEJAH"><img src="https://img.shields.io/badge/OpenReview-CVPR_2026-b31b1b" alt='openreview'></a>
-<a href="XXXX-7"><img src="https://img.shields.io/badge/%F0%9F%A4%97_Demo-Coming_Soon-F0CD4B?labelColor=666EEE" alt='HuggingFace Space'></a>
-<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt='license'></a>
-<a href="XXXX-6"><img src="https://img.shields.io/badge/GitHub-Code-blue" alt='code'></a>
-</div>
+- `RCS` (Radial Counting Stability)
+- `CSC` (Cross-Scale Consistency)
+- `SVS` (Semantic-Visual Stability)
+- `ARI` (Adaptive Repeatability Index)
 
-<div align="center">
+On 469 high-resolution *Loropetalum chinense* UAV images (average ~1,398 plants/frame, max 1,789), the framework shows strong correlation with deployment success (`rho = 0.87`, `p < 0.001`) and reduces validation time by about `15x` compared to full manual annotation (`190-380 min/image`). Within the metric pipeline, CLIP-based stratified sampling provides about `35x` computational speedup.
 
-<!-- Animated GIF showing detection pipeline -->
-<img src="assets/demo_detection.gif" width="800" alt="Plant Detection Pipeline Demo">
+## Highlights from the Camera-Ready Paper
 
-<br>
+- Dataset scale: `469` UAV images (`4000x3000`) with dense canopies and `60-80%` occlusion.
+- Baseline counting model (test set): `MAE = 23.7 +/- 8.2`, `RMSE = 31.4`, relative error `1.85%` (mean count `1,412`).
+- Production thresholds recommended by the paper:
+  - `RCS > 0.95`
+  - `CSC > 0.90`
+  - `SVS > 0.55`
+  - `ARI > 0.85`
 
-<!-- Video player with fallback -->
-<details>
-<summary>🎬 <b>Watch High-Quality Video Version (MP4)</b></summary>
+## Demo
 
-<br>
+<p align="center">
+  <img src="assets/demo_detection.gif" width="900" alt="Plant detection pipeline demo">
+</p>
 
-https://anonymous.4open.science/r/Beyond-Green-Loropetalum-and-Non-Green-Ornamental-Species-Annotation-Free-Robustness-Metrics-B2D2/assets/demo_detection.mp4
-
-<br>
-
-<em>Full resolution detection pipeline with better quality</em>
-
-</details>
-
-</div>
-
-## Demo Package
-
-A high-resolution storyboard demo has been generated in:
+Primary demo outputs:
 
 - `results/cvpr_demo/cvpr_demo.mp4`
 - `results/cvpr_demo/index.html`
 - `results/cvpr_demo/storyboard.md`
 
-This version follows the same presentation standard used in the `Quantum-Feature-Selection` CVPR demo workflow: `2560x1440`, `30 fps`, white-background storyboard slides, and publication-style captions.
+Rebuild demo assets:
 
+```bash
+python scripts/generate_hd_demo_stage_assets.py
+python scripts/build_cvpr_demo.py --manifest cvpr_demo_manifest.json --output-dir results/cvpr_demo
+```
 
-## 📣 News
+## Reported Results
 
-- **[Nov/2025]** 🎉 Paper submitted to CVPR 2026!
-- **[Dec/2025]** 🚀 Code and evaluation framework released
-- **[Dec/2025]** 🌿 Cross-dataset evaluation on 3,024 images (MangoNet, Leafy Spurge, PlantNet Purple)
+### Table 1: Aggregate Robustness Statistics on 469 Images
 
-## Abstract
+| Metric | Mean | Std | Min | Max | Production Threshold |
+| :--- | ---: | ---: | ---: | ---: | :--- |
+| RCS | 0.981 | 0.015 | 0.958 | 0.998 | > 0.95 |
+| CSC | 0.932 | 0.038 | 0.770 | 0.993 | > 0.90 |
+| SVS | 0.598 | 0.024 | 0.557 | 0.634 | > 0.55 |
+| ARI | 0.919 | 0.087 | 0.685 | 0.994 | > 0.85 |
 
-Evaluating computer vision models for agricultural deployment remains challenging when ground-truth annotations are expensive or unavailable. Traditional accuracy-centric metrics often fail to reveal a model's reliability when confronted with dense occlusion, non-standard colouration, and variable lighting conditions. To address this, we introduce a novel **annotation-free evaluation framework** that measures model robustness through four complementary consistency metrics, eliminating the need for manual labels while predicting real-world deployment success.
-
-Our framework addresses critical gaps in UAV-based monitoring of non-green ornamental species, where traditional green-vegetation indices fail and dense canopy occlusion creates counting ambiguity. We propose four self-validated metrics:
-
-- **Radial Counting Stability (RCS)**: Measures spatial prediction consistency under perturbations
-- **Cross-Scale Consistency (CSC)**: Evaluates robustness across different UAV flight altitudes  
-- **Semantic-Visual Stability (SVS)**: Quantifies segmentation coherence without ground truth
-- **Adaptive Repeatability Index (ARI)**: Assesses stochastic consistency under augmentation
-
-Comprehensive evaluation on **469 ultra-high-resolution UAV images** of *Loropetalum chinense* demonstrates strong correlation with deployment success (Spearman ρ = 0.87, p < 0.001), achieving **26.8× faster evaluation** than manual verification and identifying model failures invisible to traditional accuracy metrics.
-
-<p align="center">
-  <img src="assets/Abstract_Image.png" alt="Framework" width="80%" style="background-color: white; padding: 20px;">
-</p>
-
-<p align="center">
-  <img src="assets/metrics.png" alt="Metrics Radar Plot" width="70%">
-</p>
-
-<p align="center">
+### Table 2: Cross-Dataset Robustness (Min-Max Normalized)
 
 | Dataset | N | RCS | CSC | SVS | ARI |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| Loropetalum | 469 | 0.71 ± 0.04 | 0.92 ± 0.05 | 0.62 ± 0.05 | 0.41 ± 0.09 |
-| MangoNet | 855 | 0.69 ± 0.05 | 0.88 ± 0.06 | 0.64 ± 0.03 | 0.45 ± 0.11 |
-| Leafy Spurge | 900 | 0.45 ± 0.28 | 0.52 ± 0.31 | 0.53 ± 0.25 | 0.50 ± 0.45 |
-| PlantNet Purple | 800 | 0.57 ± 0.22 | 0.69 ± 0.33 | 0.52 ± 0.16 | 0.29 ± 0.23 |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| Loropetalum | 469 | 0.71 +/- 0.04 | 0.92 +/- 0.05 | 0.62 +/- 0.05 | 0.41 +/- 0.09 |
+| MangoNet | 855 | 0.69 +/- 0.05 | 0.88 +/- 0.06 | 0.64 +/- 0.03 | 0.45 +/- 0.11 |
+| Leafy Spurge | 900 | 0.45 +/- 0.28 | 0.52 +/- 0.31 | 0.53 +/- 0.25 | 0.50 +/- 0.45 |
+| PlantNet Purple | 800 | 0.57 +/- 0.22 | 0.69 +/- 0.33 | 0.52 +/- 0.16 | 0.29 +/- 0.23 |
 
-</p>
+Note: Table 1 uses absolute aggregate statistics on the Loropetalum benchmark, while Table 2 is min-max normalized for cross-dataset comparison and is not directly comparable to Table 1.
 
-<p align="center">
-  <img src="assets/DJI_20250408145313_0091_D_analysis.png" alt="Analysis Steps Visualization" width="100%">
-</p>
+## Installation
 
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install -e .
+```
 
-## Our Framework
+## Quick Start
 
-<p align="center">
-  <img src="assets/CVPR_Architecture.png" alt="Framework" width="100%" style="background-color: white; padding: 20px;">
-</p>
+### 1) Run the CVPR Pipeline
 
-</div>
+```bash
+python experiments/cvpr_optimized_processing.py \
+  --input path/to/image_or_dataset \
+  --output results/cvpr_pipeline
+```
 
-## Online Demo
+### 2) Generate Annotation-Free Metrics
 
-* Visit our demo
-  <a href="XXXX-8"><img src="https://img.shields.io/badge/%F0%9F%A4%97_Hugging_Face-Space-F0CD4B?labelColor=666EEE" alt='HuggingFace Space'></a>
-  and test our annotation-free metrics on your own images!
-* Upload UAV images of ornamental plants and get instant robustness scores
+```bash
+python experiments/loropetalum_metrics_generation.py \
+  --data-dir path/to/loropetalum_dataset \
+  --output results/loropetalum_metrics
+```
 
-## 📊 Full Loropetalum Dataset (469 Images)
+### 3) Evaluate Strategy Variants
 
-* The Loropetalum dataset consists of **469 ultra-high-resolution UAV images** (4000×3000 px) of *Loropetalum chinense* canopies captured under diverse field conditions
-* Dataset includes:
-  - 🌿 Dense canopy occlusion (60-80%)
-  - 🎨 Non-green foliage (purple/burgundy colouration)
-  - ☀️ Variable lighting (morning, midday, evening)
-  - 🚁 Multiple flight altitudes (15-25 meters)
-* **Dataset will be released upon paper acceptance**
-* Download instructions:
+```bash
+python experiments/strategy_evaluation.py \
+  --data-dir path/to/loropetalum_dataset \
+  --output results/strategy_evaluation
+```
+
+### 4) Compare Classical vs YOLOv8
+
+```bash
+python experiments/classical_vs_yolov8_comparison.py \
+  --data-dir path/to/loropetalum_dataset \
+  --output results/classical_vs_yolov8
+```
+
+## Repository Layout
+
+```text
+.
+|- assets/                  # figures, demo stages, media
+|- configs/                 # experiment config (paper thresholds included)
+|- experiments/             # experiment entry points
+|- scripts/                 # demo and utility scripts
+|- src/                     # metrics, models, preprocessing, utils
+|- cvpr_demo_manifest.json  # storyboard manifest
+`- results/cvpr_demo/       # generated demo package
+```
+
+## Camera-Ready Checklist
+
+See [`docs/CAMERA_READY_CHECKLIST.md`](docs/CAMERA_READY_CHECKLIST.md) for the release checklist used for this repository.
+Canonical paper metadata and benchmark values are summarized in [`docs/PAPER_ALIGNMENT.md`](docs/PAPER_ALIGNMENT.md).
+
+## Citation
+
+Machine-readable citation metadata is provided in [`CITATION.cff`](CITATION.cff).
+
+```bibtex
+@inproceedings{manjunatha2026beyondgreen,
+  title     = {Beyond Green: Domain-Aware Self-Validated Instance Counting for Loropetalum and Non-Green Ornamental Species using Annotation-Free Robustness Metrics},
+  author    = {Manjunatha, Harshitha and Sundaravadivel, Prabha and Borah, Shekhar Suman and Tamil, Lakshman and Knight, Patricia R. and Torbert, H. Allen and Kumpatla, Siva P.},
+  booktitle = {CVPR 2026 Workshops (V4A)},
+  year      = {2026},
+  note      = {Accepted poster},
+  url       = {https://openreview.net/forum?id=SD6FZaEJAH}
+}
+```
+
+## License
+
+This project is released under the MIT License. See [`LICENSE`](LICENSE) for details.

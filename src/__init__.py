@@ -1,5 +1,5 @@
 """
-Beyond Green: Annotation-Free Robustness Metrics for Non-Green Ornamental Plant Detection
+Beyond Green: Domain-Aware Self-Validated Instance Counting for Loropetalum and Non-Green Ornamental Species
 Main package initialization
 """
 

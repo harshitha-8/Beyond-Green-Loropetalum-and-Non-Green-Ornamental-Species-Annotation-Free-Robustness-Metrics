@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated CVPR 2026 workshop paper."
+title: "Beyond Green: Domain-Aware Self-Validated Instance Counting for Loropetalum and Non-Green Ornamental Species using Annotation-Free Robustness Metrics"
+type: software
+license: MIT
+version: "1.0.0"
+date-released: 2026-04-06
+repository-code: "https://github.com/harshitha-8/Beyond-Green-Loropetalum-and-Non-Green-Ornamental-Species-Annotation-Free-Robustness-Metrics"
+url: "https://github.com/harshitha-8/Beyond-Green-Loropetalum-and-Non-Green-Ornamental-Species-Annotation-Free-Robustness-Metrics"
+authors:
+  - given-names: "Harshitha"
+    family-names: "Manjunatha"
+    affiliation: "The University of Texas at Dallas"
+  - given-names: "Prabha"
+    family-names: "Sundaravadivel"
+    affiliation: "The University of Texas at Tyler"
+    email: "psundaravadivel@uttyler.edu"
+  - given-names: "Shekhar Suman"
+    family-names: "Borah"
+    affiliation: "The University of Texas at Tyler"
+  - given-names: "Lakshman"
+    family-names: "Tamil"
+    affiliation: "The University of Texas at Dallas"
+  - given-names: "Patricia R."
+    family-names: "Knight"
+    affiliation: "Mississippi State University"
+  - given-names: "H. Allen"
+    family-names: "Torbert"
+    affiliation: "USDA Agricultural Research Service (ARS)"
+  - given-names: "Siva P."
+    family-names: "Kumpatla"
+    affiliation: "USDA Agricultural Research Service (ARS)"
+preferred-citation:
+  type: paper-conference
+  title: "Beyond Green: Domain-Aware Self-Validated Instance Counting for Loropetalum and Non-Green Ornamental Species using Annotation-Free Robustness Metrics"
+  year: 2026
+  url: "https://openreview.net/forum?id=SD6FZaEJAH"
+  authors:
+    - given-names: "Harshitha"
+      family-names: "Manjunatha"
+    - given-names: "Prabha"
+      family-names: "Sundaravadivel"
+    - given-names: "Shekhar Suman"
+      family-names: "Borah"
+    - given-names: "Lakshman"
+      family-names: "Tamil"
+    - given-names: "Patricia R."
+      family-names: "Knight"
+    - given-names: "H. Allen"
+      family-names: "Torbert"
+    - given-names: "Siva P."
+      family-names: "Kumpatla"

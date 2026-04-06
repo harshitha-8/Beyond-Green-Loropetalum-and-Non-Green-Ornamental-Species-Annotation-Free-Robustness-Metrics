@@ -1,7 +1,7 @@
 # Experiment Configuration for CVPR 2026 Submission
 
 dataset:
-  name: "Loropetalum Chinese UAV Dataset"
+  name: "Loropetalum chinense UAV Dataset"
   total_images: 469
   resolution: [4000, 3000]
   average_plants_per_image: 1398
@@ -21,6 +21,7 @@ model:
     min_distance_peaks: 25
 
 robustness_metrics:
+  # Camera-ready production thresholds from the CVPR 2026 paper.
   thresholds:
     rcs: 0.95
     csc: 0.90

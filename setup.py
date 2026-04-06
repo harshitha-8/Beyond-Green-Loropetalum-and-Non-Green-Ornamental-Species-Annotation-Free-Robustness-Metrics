@@ -1,11 +1,15 @@
-from setuptools import setup, find_packages
+from pathlib import Path
+from setuptools import find_packages, setup
+
+
+README = Path(__file__).with_name("README.md").read_text(encoding="utf-8")
 
 setup(
     name="loropetalum-annotation-free-metrics",
     version="1.0.0",
-    author="Anonymous CVPR Submission",
-    description="Annotation-Free Robustness Metrics for Dense Plant Counting",
-    long_description=open("README.md").read(),
+    author="Harshitha Manjunatha et al.",
+    description="Domain-aware self-validated instance counting and annotation-free robustness metrics for non-green ornamental species",
+    long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/harshitha-8/Beyond-Green-Loropetalum-and-Non-Green-Ornamental-Species-Annotation-Free-Robustness-Metrics",
     packages=find_packages(),

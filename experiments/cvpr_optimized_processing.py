@@ -1,6 +1,6 @@
 """
 CVPR Optimized Processing Pipeline
-Implements the optimized processing pipeline described in the CVPR submission
+Implements the optimized processing pipeline described in the camera-ready CVPR workshop paper
 """
 
 import numpy as np

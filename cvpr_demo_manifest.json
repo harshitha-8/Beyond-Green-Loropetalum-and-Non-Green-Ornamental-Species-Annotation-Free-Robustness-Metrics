@@ -1,10 +1,10 @@
 {
-  "title": "Beyond Green Ornamental Plant Robustness Metrics Demo",
+  "title": "Beyond Green: Domain-Aware Self-Validated Instance Counting Demo",
   "description": "This storyboard keeps the first three presentation slides and then follows the five high-resolution processing stages used for the ornamental plant detection demo from frame 4 onward.",
   "slides": [
     {
       "layout": "title",
-      "title": "Beyond Green: Annotation-Free Robustness Metrics for Non-Green Ornamental Plant Detection",
+      "title": "Beyond Green: Domain-Aware Self-Validated Instance Counting for Loropetalum and Non-Green Ornamental Species",
       "caption": "",
       "source_label": "Title slide"
     },
