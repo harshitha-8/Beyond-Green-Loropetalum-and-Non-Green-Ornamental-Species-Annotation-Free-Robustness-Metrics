@@ -35,7 +35,7 @@ On 469 high-resolution *Loropetalum chinense* UAV images (average ~1,398 plants/
 - Targets hard real-world conditions: dense canopies, non-green foliage, shadow noise, and severe occlusion.
 - Connects research metrics to deployment outcomes: when all four thresholds pass, observed failure rate drops substantially.
 
-## For Recruiters and Collaborators
+## For Collaborators
 
 I am **Harshitha Manjunatha**, and this project represents how I approach computer vision work end-to-end:
 
@@ -43,9 +43,9 @@ I am **Harshitha Manjunatha**, and this project represents how I approach comput
 - Method design with interpretable, deployment-oriented metrics.
 - Practical tooling with reproducible scripts, visual diagnostics, and documentation.
 
-If you are hiring for roles in **Computer Vision, ML Research, Applied AI, or Agricultural AI**, or want to collaborate on UAV/remote-sensing robustness, I would be glad to connect.
+If you want to collaborate on UAV and remote-sensing robustness, I would be glad to connect.
 
-- Direct contact: `harshitha.m@utdallas.edu`
+- Direct contact: `Harshitha.Manjunatha@UTDallas.edu`
 - Project issues/discussions: this repository
 
 ## Highlights from the Camera-Ready Paper
