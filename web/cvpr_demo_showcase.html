@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beyond Green | CVPR 2026 V4A Demo</title>
+  <meta name="description" content="CVPR 2026 Workshop V4A accepted poster demo: annotation-free robustness metrics for Loropetalum and non-green ornamental species.">
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --panel: #ffffff;
+      --ink: #0d1b2a;
+      --muted: #3e536b;
+      --line: #d7e1ec;
+      --accent: #005f73;
+      --accent-2: #0a9396;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(10, 147, 150, 0.10), transparent 35%),
+        radial-gradient(circle at 95% 5%, rgba(0, 95, 115, 0.12), transparent 35%),
+        var(--bg);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 28px 18px 64px;
+    }
+    .hero {
+      background: linear-gradient(140deg, #ffffff 0%, #eff6fb 100%);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 26px 24px;
+      box-shadow: 0 12px 32px rgba(13, 27, 42, 0.08);
+    }
+    .badge {
+      display: inline-block;
+      background: #e7f6f6;
+      color: #024850;
+      border: 1px solid #bce4e5;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.35rem, 2.2vw, 2.05rem);
+      line-height: 1.25;
+    }
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+    .meta {
+      margin-top: 14px;
+      color: #334a62;
+      font-size: 0.95rem;
+    }
+    .grid {
+      display: grid;
+      gap: 12px;
+      margin: 20px 0 0;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 14px 12px;
+    }
+    .k {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+    .v {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 0;
+    }
+    h2 {
+      margin: 30px 0 10px;
+      font-size: 1.35rem;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    ul {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
+    li { margin: 7px 0; }
+    video {
+      width: 100%;
+      border-radius: 12px;
+      background: #000;
+      border: 1px solid #ccd8e4;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .btn {
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 10px;
+      padding: 9px 13px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .btn.alt {
+      color: #104260;
+      background: #edf4fb;
+      border-color: #cbdbeb;
+    }
+    .footer {
+      margin-top: 22px;
+      font-size: 0.9rem;
+      color: #50657c;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <span class="badge">CVPR 2026 Workshop V4A Accepted Poster</span>
+      <h1>Beyond Green: Domain-Aware Self-Validated Instance Counting for Loropetalum and Non-Green Ornamental Species using Annotation-Free Robustness Metrics</h1>
+      <p class="sub">A deployment-oriented evaluation framework for dense UAV canopy imagery, where robustness matters as much as raw accuracy.</p>
+      <p class="meta">
+        Harshitha Manjunatha, Prabha Sundaravadivel, Shekhar Suman Borah, Lakshman Tamil, Patricia R. Knight, H. Allen Torbert, Siva P. Kumpatla
+      </p>
+      <div class="grid">
+        <div class="card">
+          <div class="k">Benchmark Size</div>
+          <p class="v">469 UAV Images</p>
+        </div>
+        <div class="card">
+          <div class="k">Deployment Correlation</div>
+          <p class="v">rho = 0.87</p>
+        </div>
+        <div class="card">
+          <div class="k">Validation Efficiency</div>
+          <p class="v">~15x Faster</p>
+        </div>
+        <div class="card">
+          <div class="k">Sampling Speedup</div>
+          <p class="v">~35x</p>
+        </div>
+      </div>
+    </section>
+
+    <h2>What Is New In This Methodology</h2>
+    <section class="panel">
+      <ul>
+        <li><strong>Annotation-free robustness scoring:</strong> replaces expensive full manual validation with four complementary consistency metrics.</li>
+        <li><strong>Four-metric deployment lens:</strong> RCS (spatial stability), CSC (scale consistency), SVS (semantic-visual coherence), and ARI (repeatability).</li>
+        <li><strong>Domain-aware evaluation:</strong> tailored for dense non-green ornamental canopies with shadow, occlusion, and color-shift challenges.</li>
+        <li><strong>Actionable thresholds:</strong> production-ready guidance using RCS &gt; 0.95, CSC &gt; 0.90, SVS &gt; 0.55, ARI &gt; 0.85.</li>
+      </ul>
+    </section>
+
+    <h2>CVPR Demo Video</h2>
+    <section class="panel">
+      <video controls playsinline preload="metadata">
+        <source src="../results/cvpr_demo/cvpr_Loropetalum_demo.mp4" type="video/mp4">
+        Your browser does not support HTML5 video. Download the video directly:
+        <a href="../results/cvpr_demo/cvpr_Loropetalum_demo.mp4">cvpr_Loropetalum_demo.mp4</a>
+      </video>
+      <div class="links">
+        <a class="btn" href="https://openreview.net/forum?id=SD6FZaEJAH" target="_blank" rel="noopener">OpenReview Paper</a>
+        <a class="btn alt" href="https://github.com/harshitha-8/Beyond-Green-Loropetalum-and-Non-Green-Ornamental-Species-Annotation-Free-Robustness-Metrics" target="_blank" rel="noopener">GitHub Repository</a>
+      </div>
+    </section>
+
+    <p class="footer">
+      Contact: harshitha.m@utdallas.edu
+    </p>
+  </main>
+</body>
+</html>

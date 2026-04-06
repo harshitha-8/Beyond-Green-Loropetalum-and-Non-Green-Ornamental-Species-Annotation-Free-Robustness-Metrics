@@ -206,6 +206,8 @@ tmp_demo_frames/
 !assets/paper_figures/
 !assets/paper_figures/*.png
 !assets/paper_figures/*.jpg
+!web/
+!web/*.html
 !results/
 !results/cvpr_demo/
 !results/cvpr_demo/**
