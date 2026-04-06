@@ -11,11 +11,11 @@
 </p>
 
 <p align="center">
-Harshitha Manjunatha<sup>1</sup>, Prabha Sundaravadivel<sup>2</sup>, Shekhar Suman Borah<sup>2</sup>, Lakshman Tamil<sup>1</sup>, Patricia R. Knight<sup>3</sup>, H. Allen Torbert<sup>4</sup>, Siva P. Kumpatla<sup>4</sup>
+Harshitha Manjunatha¹, Prabha Sundaravadivel², Shekhar Suman Borah², Lakshman Tamil¹, Patricia R. Knight³, H. Allen Torbert⁴, Siva P. Kumpatla⁴
 </p>
 
 <p align="center">
-<sup>1</sup>The University of Texas at Dallas, TX, USA | <sup>2</sup>The University of Texas at Tyler, TX, USA | <sup>3</sup>Mississippi State University, USA | <sup>4</sup>USDA Agricultural Research Service (ARS), USA
+¹The University of Texas at Dallas, TX, USA | ²The University of Texas at Tyler, TX, USA | ³Mississippi State University, USA | ⁴USDA Agricultural Research Service (ARS), USA
 </p>
 
 This repository is aligned to the camera-ready version of the accepted CVPR 2026 V4A workshop paper.
